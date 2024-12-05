@@ -57,3 +57,7 @@ func AbsoluteVal(num1 int, num2 int) int {
 	}
 	return num2 - num1
 }
+
+func HelloWord() {
+	fmt.Println("Hello, World!")
+}
