@@ -8,7 +8,7 @@ import (
 	"unicode"
 )
 
-func parseArgs(args []string) (string, error) {
+func ParseArgs(args []string) (string, error) {
 	if len(args) < 2 {
 		fmt.Println("No input file provided")
 		fmt.Printf("Usage: go run %s `inputfile`\n", args[0])
@@ -23,13 +23,13 @@ func parseArgs(args []string) (string, error) {
 	return args[1], nil
 }
 
-func checkError(e error) {
+func CheckError(e error) {
 	if e != nil {
 		panic(e)
 	}
 }
 
-func stripLine(line string) []int {
+func StripLine(line string) []int {
 	var output []int
 	for i := 0; i < len(line); i++ {
 		char := rune(line[i])
@@ -51,7 +51,7 @@ func stripLine(line string) []int {
 	return output
 }
 
-func absoluteVal(num1 int, num2 int) int {
+func AbsoluteVal(num1 int, num2 int) int {
 	if num1 > num2 {
 		return num1 - num2
 	}
