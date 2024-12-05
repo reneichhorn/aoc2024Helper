@@ -12,12 +12,12 @@ func ParseArgs(args []string) (string, error) {
 	if len(args) < 2 {
 		fmt.Println("No input file provided")
 		fmt.Printf("Usage: go run %s `inputfile`\n", args[0])
-		return "", errors.New("No input file provided")
+		return "", errors.New("no input file provided")
 	}
 	if len(args) != 2 {
 		fmt.Println("Illegal number of arguments provided")
 		fmt.Printf("Usage: go run %s `inputfile`\n", args[1])
-		return "", errors.New("Illegal number of arguments provided")
+		return "", errors.New("illegal number of arguments provided")
 
 	}
 	return args[1], nil
@@ -44,7 +44,7 @@ func StripLine(line string) []int {
 		}
 		if word.Len() > 0 {
 			val, err := strconv.Atoi(word.String())
-			checkError(err)
+			CheckError(err)
 			output = append(output, val)
 		}
 	}
